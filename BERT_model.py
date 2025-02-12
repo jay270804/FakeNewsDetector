@@ -1,11 +1,15 @@
 from transformers import AutoModelForSequenceClassification, TrainingArguments, Trainer
 from dataset import train_dataset, test_dataset
 from title_tokenizer import tokenizer
+import torch
 
 model = AutoModelForSequenceClassification.from_pretrained(
     'distilbert-base-uncased',
     num_labels=2
 )
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model.to(device)
 
 training_args = TrainingArguments(
     output_dir="./model_training_data/results",

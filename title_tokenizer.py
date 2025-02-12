@@ -11,7 +11,7 @@ tokenizer = AutoTokenizer.from_pretrained(
     pretrained_model_name_or_path='distilbert-base-uncased'
 )
 
-def tokenize_data(texts, max_length=128):
+def tokenize_data(texts, tokenizer, max_length=128):
     """
     Tokenize input texts using the specified tokenizer.
 
@@ -32,8 +32,8 @@ def tokenize_data(texts, max_length=128):
     )
 
 # Tokenize titles from training and testing datasets
-train_title_encodings = tokenize_data(train_df['title'].tolist())
-test_title_encodings = tokenize_data(test_df['title'].tolist())
+train_title_encodings = tokenize_data(train_df['title'].tolist(), tokenizer=tokenizer)
+test_title_encodings = tokenize_data(test_df['title'].tolist(), tokenizer=tokenizer)
 
 print(f"Train encodings: {train_title_encodings}")
 print(f"Test encodings: {test_title_encodings}")
