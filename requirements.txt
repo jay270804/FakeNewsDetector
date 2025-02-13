@@ -8,3 +8,7 @@ accelerate>=0.26.0
 python-dotenv
 openai
 cachetools
+faiss-cpu
+sentence-transformers
+# lxml_html_clean
+# newspaper3k
