@@ -3,13 +3,13 @@ from transformers import AutoTokenizer
 import pandas as pd
 
 # Load dataset from CSV files
-train_df = pd.read_csv("data/balanced_train_data.csv")
-test_df = pd.read_csv("data/balanced_test_data.csv")
+# train_df = pd.read_csv("data/balanced_train_data.csv")
+# test_df = pd.read_csv("data/balanced_test_data.csv")
 
-# Initialize pre-trained DistilBERT tokenizer
-tokenizer = AutoTokenizer.from_pretrained(
-    pretrained_model_name_or_path='distilbert-base-uncased'
-)
+# # Initialize pre-trained DistilBERT tokenizer
+# tokenizer = AutoTokenizer.from_pretrained(
+#     pretrained_model_name_or_path='distilbert-base-uncased'
+# )
 
 def tokenize_data(texts, tokenizer, max_length=128):
     """
@@ -32,8 +32,8 @@ def tokenize_data(texts, tokenizer, max_length=128):
     )
 
 # Tokenize titles from training and testing datasets
-train_title_encodings = tokenize_data(train_df['title'].tolist(), tokenizer=tokenizer)
-test_title_encodings = tokenize_data(test_df['title'].tolist(), tokenizer=tokenizer)
+# train_title_encodings = tokenize_data(train_df['title'].tolist(), tokenizer=tokenizer)
+# test_title_encodings = tokenize_data(test_df['title'].tolist(), tokenizer=tokenizer)
 
-print(f"Train encodings: {train_title_encodings}")
-print(f"Test encodings: {test_title_encodings}")
+# print(f"Train encodings: {train_title_encodings}")
+# print(f"Test encodings: {test_title_encodings}")
