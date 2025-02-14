@@ -1,0 +1,17 @@
+
+
+@font-face {
+  font-family: 'Alita';
+  /* src: url('/src/assets/Font/NeueHelveticaforZara-Lt-2W5WYPEJ.c3fdc7d4.woff2') format('truetype'); */
+  src: url('/src/assets/Font/DegularText-Medium.woff') format('truetype');
+  /* src: url('/src/assets/Font/NeueHelveticaforZara-Medium-3QAMVW7N.8456b130.woff2') format('truetype'); */
+  /* src: url('/src/assets/Font/NeueHelveticaforZara-Roman-H6FBO4XD.2e3e13bd.woff2') format('truetype'); */
+  /* src: url('/src/assets/Font/zaraathleticz-regular.796ceee7.woff2') format('truetype'); */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Alita', sans-serif;
+  background-color: black;
+}
