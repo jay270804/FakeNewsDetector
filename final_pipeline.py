@@ -55,5 +55,5 @@ def analyze_claim_with_evidence(claim:str):
         "url": news_urls
     }
 
-response = final_pipeline(claim="infosys layoffs 1000 in mysuru")
-print(response)
+# response = final_pipeline(claim="infosys layoffs 1000 in mysuru")
+# print(response)

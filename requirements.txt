@@ -12,3 +12,7 @@ faiss-cpu
 sentence-transformers
 # lxml_html_clean
 # newspaper3k
+sqlalchemy
+fastapi
+uvicorn
+psycopg2-binary
