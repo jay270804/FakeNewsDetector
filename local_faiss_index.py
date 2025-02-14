@@ -38,4 +38,4 @@ def read_index(claim:str, df:pd.DataFrame , threshold:float = 0.8):
 # response = read_index(claim="the unemployment rate for college graduates is 4.4 percent", df=real_df)
 # response = read_index(claim="there is growth in federal deficit", df=real_df)
 # print(response)
-# create_local_index()
+# create_local_index() 

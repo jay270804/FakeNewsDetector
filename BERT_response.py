@@ -32,7 +32,7 @@ def analyze_claim_with_BERT(claim:str):
     predicted_label_index = torch.argmax(probabilites, dim=-1).item()
     predicted_label = label_map[predicted_label_index]
     confidence_score = probabilites[0][predicted_label_index].item()
-    confidence_score = round(confidence_score, 2)
+    confidence_score = round(confidence_score, 2)*100
     return {
         "veracity": predicted_label,
         "confidence": confidence_score,
@@ -41,5 +41,5 @@ def analyze_claim_with_BERT(claim:str):
 
 # response = analyze_claim_with_BERT(claim="Wisconsin is on pace to double the number of layoffs this year.")
 # response = analyze_claim_with_BERT(claim="Bellamy Young Opens Up About Being Adopted, Her Real First Name and How She Almost Missed Out on Scandal")
-response = analyze_claim_with_BERT(claim="Taylor Swift announced a new album yesterday")
-print(response)
+# response = analyze_claim_with_BERT(claim="Taylor Swift announced a new album yesterday")
+# print(response)

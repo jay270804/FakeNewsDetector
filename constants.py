@@ -23,3 +23,6 @@ Respond with JSON:
 """
 
 TRUE = "True"
+
+WEIGHTAGE_1 = 0.2
+WEIGHTAGE_2 = 0.8
