@@ -3,8 +3,8 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 import pandas as pd
 
-# model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
-model = SentenceTransformer('sentence-transformers/distilbert-base-nli-mean-tokens')
+model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+# model = SentenceTransformer('sentence-transformers/distilbert-base-nli-mean-tokens')
 
 real_df = pd.read_csv('data/Real_df_for_RAFC.csv')
 # Load dataset (example: LIAR)
@@ -20,7 +20,7 @@ def create_local_index():
     index.add(embeddings)
 
 # Save index
-    faiss.write_index(index, "data/local_real_claims_bert.index")
+    faiss.write_index(index, "data/local_real_claims.index")
 
 def read_index(claim:str, df:pd.DataFrame , threshold:float = 0.8):
     # local_index = faiss.read_index("data/local_real_claims.index")
@@ -36,5 +36,6 @@ def read_index(claim:str, df:pd.DataFrame , threshold:float = 0.8):
 
 # create_local_index()
 # response = read_index(claim="the unemployment rate for college graduates is 4.4 percent", df=real_df)
-response = read_index(claim="there is growth in federal deficit", df=real_df)
-print(response)
+# response = read_index(claim="there is growth in federal deficit", df=real_df)
+# print(response)
+# create_local_index()

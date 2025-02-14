@@ -26,4 +26,4 @@ def validate_claim(claim):
         print("Failed to parse OpenAI response.")
 
 # validate_claim("PM Modi offers Pinaka rocket systems to France")
-validate_claim("Tonight in Ohio, more people came out to vote for Barack Obama in an unopposed race than voted for (Mitt) Romney and (Rick) Santorum combined.")
+# validate_claim("Tonight in Ohio, more people came out to vote for Barack Obama in an unopposed race than voted for (Mitt) Romney and (Rick) Santorum combined.")

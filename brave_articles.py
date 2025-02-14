@@ -18,7 +18,8 @@ def brave_search(query):
         news_articles.append(
             {
                 'title': result['title'],
-                'text': result['description']
+                'text': result['description'],
+                'url': result['url']
             }
         )
 
